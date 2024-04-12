@@ -1,0 +1,60 @@
+#clockContainer {
+    position: relative;
+    margin: auto;
+    height: 2048; /* to make the height and width responsive */
+    width: 1536;
+    background-size: 100%;
+}
+
+iframe#backgroundFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe border */
+    z-index: 10;
+}
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: #663300;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 18px;
+    height: 250px;
+    top: 325px;
+    left: 860px;
+}
+
+#minute {
+    width: 16px;
+    height: 315px;
+    top: 280px;
+    left: 864px;
+}
+
+#second {
+    width: 10px;
+    height: 425px;
+    top: 180px;
+    left: 870px;
+}
+
+#imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    background-image: url("hi.png"); /* Replace with your image path */
+    background-size: cover; /* Adjust image size as needed */
+    background-repeat: no-repeat; /* Prevent image tiling */
+    z-index: 1; /* Ensure image appears on top of clock hands */
+}
